@@ -5,6 +5,12 @@
 #include <map>
 using namespace std;
 
+//Milestone 3 
+
+void printRange(const map<string, int> &traffic, int low, int high) {
+    cout << "Airports with traffic in rage[" << low << ", " << high << "]:" << endl;
+}
+
 int main () {
     ifstream in("210-final-1-FA25.txt");
 
@@ -50,5 +56,5 @@ int main () {
     cout << endl;
 
     return 0;
-    
+
 }
