@@ -19,9 +19,13 @@ int main () {
     
     while (in >> origin >> dest) {
         traffic[origin]++;
+        traffic[dest]++;
     }
 
-    cout << "Size of map: " << traffic.size() << endl;
+    cout << "All airport traffic counts:" << endl;
+    for (const auto& entry : traffic) {
+        cout << entry.first << " " << entry.second << endl;
+    }
     
     return 0;
 }
