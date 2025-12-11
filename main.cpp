@@ -8,11 +8,11 @@ using namespace std;
 //Milestone 3 
 
 void printRange(const map<string, int> &traffic, int low, int high) {
-    cout << "Airports with traffic in rage[" << low << ", " << high << "]:" << endl;
+    cout << "Airports with traffic in range [" << low << ", " << high << "]:" << endl;
 
     for (const auto& entry : traffic) {
-        if (entry.second = low && entry.second = high) {
-            cout << entry.first << endl;
+        if (entry.second >= low && entry.second <= high) {
+            cout << entry.first << " " << entry.second << endl;
         }
     }
 
@@ -53,7 +53,7 @@ int main () {
     }
 
     cout << "Busiest airport traffic count: " << maxCount << endl;
-    cout << "Busiest aiports:" << endl;
+    cout << "Busiest airports:" << endl;
    
     for (const auto& entry : traffic) {
         if (entry.second == maxCount) {
