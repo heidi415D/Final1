@@ -9,6 +9,14 @@ using namespace std;
 
 void printRange(const map<string, int> &traffic, int low, int high) {
     cout << "Airports with traffic in rage[" << low << ", " << high << "]:" << endl;
+
+    for (const auto& entry : traffic) {
+        if (entry.second = low && entry.second = high) {
+            cout << entry.first << endl;
+        }
+    }
+
+    cout << endl;
 }
 
 int main () {
@@ -54,6 +62,10 @@ int main () {
     }
 
     cout << endl;
+
+    // milestone 3
+    printRange(traffic, 5, 10);
+    printRange(traffic, 20, 40);
 
     return 0;
 
