@@ -31,18 +31,24 @@ int main () {
 
     // milestone 2
     int maxCount = 0;
-    string busiest;
 
     for (const auto& entry : traffic) {
-        if (entry.second >= maxCount) {
+        if (entry.second > maxCount) {
             maxCount = entry.second;
-            busiest = entry.first;
         }
     }
 
     cout << "Busiest airport traffic count: " << maxCount << endl;
     cout << "Busiest aiports:" << endl;
-    cout << busiest << endl;
+   
+    for (const auto& entry : traffic) {
+        if (entry.second == maxCount) {
+            cout << entry.first << endl;
+        }
+    }
+
+    cout << endl;
 
     return 0;
+    
 }
